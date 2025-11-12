@@ -11,4 +11,4 @@ spec:
       nodePort: 30007
       
       
-##  nodes pods range (30000-32767)
+##  nodePort's range (30000-32767)

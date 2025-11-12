@@ -9,3 +9,6 @@ spec:
       port: 80
       targetPort: 80
       nodePort: 30007
+      
+      
+##  nodes pods range (30000-32767)

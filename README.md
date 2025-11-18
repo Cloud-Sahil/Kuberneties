@@ -85,7 +85,9 @@ aws configure
 
 . Cluster Select
 
-. Cluster Node
+. Compute
+
+. Add Node
 
 . Create IAM Role
 

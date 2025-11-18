@@ -5,10 +5,15 @@
 ## 2. EC2 (Elastic Compute Cloud) -
 
 . Launch instance 
+
 . Instance Type - (Big)
+
 . Storage - (20 GB)
+
 . Launch instance 
+
 . Connect
+
 
 ```shell
 ## 1. Switch to root user

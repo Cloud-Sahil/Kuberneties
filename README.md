@@ -22,18 +22,18 @@
 
 
 
-### 1. Switch to root user
+###  Switch to root user
 ```sh
 sudo -i
 ```
 
 
-### 2. Update the instance
+###  Update the instance
 ```sh
 apt update
 ```
 
-### 3. Install kubectl :  Download the latest release with the command
+###  Install kubectl :  Download the latest release with the command
 ```sh
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
@@ -63,7 +63,7 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 ```
 
-### 4. Install AWS CLI on Ubuntu
+###  Install AWS CLI on Ubuntu
 
 #### Download the aws cli bundle using below command
 ```sh
@@ -73,7 +73,7 @@ unzip awscliv2.zip
 sudo ./aws/install
 ```
 
-### 5. Configure AWS CLI
+###  Configure AWS CLI
 
 #### To connect AWS using CLI we have configure AWS user using below command
 ```sh

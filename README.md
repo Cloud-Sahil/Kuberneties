@@ -24,12 +24,16 @@
 ```shell
 ## 1. Switch to root user
 sudo -i
+```
 
+```sh
 ## 2. Update the instance
 apt update
-
+```
+```sh
 ## 3:Install kubectl :  Download the latest release with the command
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
 
 
 

@@ -63,6 +63,12 @@ mv ./kubectl ~/.local/bin/kubectl
 kubectl version --client
 ```
 
+### 4. Install AWS CLI on Ubuntu
 
-
-
+#### Download the aws cli bundle using below command
+```sh
+sudo apt install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+```

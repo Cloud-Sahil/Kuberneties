@@ -53,7 +53,7 @@ echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-Note: If you do not have root access on the target system, you can still install kubectl to the ~/.local/bin directory:
+#### Note: If you do not have root access on the target system, you can still install kubectl to the ~/.local/bin directory:
 ```sh
 chmod +x kubectl
 mkdir -p ~/.local/bin

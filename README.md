@@ -2,6 +2,12 @@
 
 ## 1. Create EKS Cluster
 
+. Create IAM Role 
+
+. Security Group
+
+.  Create EKS Cluster
+
 ## 2. EC2 (Elastic Compute Cloud) -
 
 . Launch instance 

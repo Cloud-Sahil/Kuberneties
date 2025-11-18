@@ -2,7 +2,10 @@
 
 ## 1. Create EKS Cluster
 
-## 2. EC2
+## 2. EC2 (Elastic Compute Cloud) -
+
+. Launch instance 
+
 
 
 

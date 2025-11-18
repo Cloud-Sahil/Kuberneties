@@ -22,7 +22,7 @@
 
 
 
-###  Switch to root user
+###  . Switch to root user
 ```sh
 sudo -i
 ```

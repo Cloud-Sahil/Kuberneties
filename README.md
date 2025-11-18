@@ -81,7 +81,7 @@ sudo ./aws/install
 aws configure
 ```
 
-## 3. EKS Cluster 
+## 3. Then Go To EKS Cluster 
 
 . Cluster Select
 
@@ -98,9 +98,9 @@ aws configure
 . Create
 
 
-## 4. EC2 (Elastic Compute Cloud)
+## 4. Then Go To EC2 (Elastic Compute Cloud)
 
 #### Log In Into EKS cluster
 ```sh
-aws eks update-kubeconfig --name (_EKS Cluster Name_)
+aws eks update-kubeconfig --name (**EKS Cluster Name**)
 ```

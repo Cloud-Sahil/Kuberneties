@@ -106,12 +106,12 @@ aws eks update-kubeconfig --name (**EKS Cluster Name**)
 ```
 Ex. aws eks update-kubeconfig --name k8s
 
-#### 6. Check Cluster Information
+### 6. Check Cluster Information
 ```sh
 kubectl cluster-info
 ```
 
-#### 7. Check Node
+### 7. Check Node
 ```sh
 kubectl get nodes
 ```

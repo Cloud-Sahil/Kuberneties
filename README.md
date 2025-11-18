@@ -97,3 +97,10 @@ aws configure
 
 . Create
 
+
+## 4. EC2 (Elastic Compute Cloud)
+
+#### Log In Into EKS cluster
+```sh
+aws eks update-kubeconfig --name (_EKS Cluster Name_)
+```

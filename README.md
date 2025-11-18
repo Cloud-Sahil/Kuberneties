@@ -2,8 +2,7 @@
 
 ## 1. Create EKS Cluster
 
-Add roles
-
+## 2. EC2
 
 
 

@@ -79,3 +79,9 @@ sudo ./aws/install
 ```sh
 aws configure
 ```
+
+## 3. EKS Cluster 
+
+. Cluster Select
+
+. Cluster Node

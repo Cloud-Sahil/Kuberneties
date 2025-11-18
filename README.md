@@ -86,3 +86,12 @@ aws configure
 . Cluster Select
 
 . Cluster Node
+
+. Create IAM Role
+
+. Add Policy  (AmazonEKSWorkerNodeMinimalPolicy)
+
+. Add EC2 Instance Type
+
+. Create
+

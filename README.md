@@ -104,3 +104,4 @@ aws configure
 ```sh
 aws eks update-kubeconfig --name (**EKS Cluster Name**)
 ```
+#### Ex. aws eks update-kubeconfig --name k8s

@@ -3,7 +3,8 @@
 1. NameSpace
 2. Replication Controller  -- (Old Version)
 3. Replica Set  -- (New Version)
-4. Deployments
+4. Deamonset 
+5. Deployments
   - Rolling update
   - Rolling out
-5. Stateful Set  -- Use in database
+6. Stateful Set  -- Use in database

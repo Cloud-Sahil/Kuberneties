@@ -1,5 +1,5 @@
 # Kubernetes NameSpace
-
+---
 ## Namespaces provide a way to divide cluster resources between multiple users or teams.
 
 ## Default Namespaces

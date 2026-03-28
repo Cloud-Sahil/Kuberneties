@@ -2,3 +2,27 @@
 ---
 ## A DaemonSet automatically deploys a copy of a Pod on all (or selected) nodes.
 ---
+```sh
+apiVersion: apps/v1
+kind:  DaemonSet
+metadata: 
+  name: daemon
+  labels:
+    app: depapp
+spec:
+    selector: 
+      matchLabels: 
+          app: depapp
+    template:
+      metadata:
+        labels:
+          name: cwatch
+          app: depapp
+      spec:
+        containers:
+          - name: cwatch
+            image: amazon/cloudwatch-agent:latest
+            ports:
+                - containerPort: 80
+                  protocol: TCP
+```

@@ -1,6 +1,14 @@
 # Kubernetes Replica Set
 
 ---
+
+## Improved version of Replication Controller.
+
+### Key points:
+ - Maintains desired number of Pods
+ - Supports **set-based selectors**
+ - Usually managed by Deployment (not used directly)
+---
 ## Write rs Yaml File 
 ~~~sh
 nano rs.yaml

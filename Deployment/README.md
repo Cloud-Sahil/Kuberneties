@@ -3,9 +3,9 @@
 ## A Deployment in Kubernetes is used to manage and update applications.
 
 ### Key points:
-Manages **ReplicaSets**
-Ensures desired number of Pods are running
-Supports **rolling updates & rollbacks**
+ - Manages **ReplicaSets**
+ - Ensures desired number of Pods are running
+ - Supports **rolling updates & rollbacks**
 
 ---
 ## Deployment (Rolling Update)

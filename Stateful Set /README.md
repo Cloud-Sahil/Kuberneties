@@ -23,3 +23,63 @@
  - Distributed systems (Kafka, Zookeeper)
  - Applications requiring persistent data
 ---
+```sh
+nano database.yaml
+```
+```sh
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: my-stateful-app
+spec:
+  serviceName: "my-service"
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: nginx
+        volumeMounts:
+        - name: data
+          mountPath: /data
+
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+```
+```sh
+apiVersion: apps/v1
+kind: StatefulSet
+metadata: 
+    name: my-sts
+spec:
+  selector: 
+    matchLabels: 
+        app: my-app
+  serviceName: "my-sts-service"
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+        containers:
+           - name: mysql
+             image: mysql:latest
+             env:
+              - name: MYSQL_ROOT_PASSWORD    
+                value: redhat
+             ports:
+                - containerPort: 3306
+```

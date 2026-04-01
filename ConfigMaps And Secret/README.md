@@ -38,3 +38,4 @@ A **Secret** is a Kubernetes resource designed to store confidential data, such 
 | Example | DB host, app config | DB password, API token |
 
 ---
+## 1. Create Configmap -

@@ -43,3 +43,21 @@ A **Secret** is a Kubernetes resource designed to store confidential data, such 
 ```sh
 nano config.yaml
 ```
+```sh
+apiVersion: v1 
+kind: ConfigMap
+metadata:
+    name: my-cred
+data: 
+  PASSWORD: "redhat123"
+  USERNAME: "admin"
+  CITY: "pune"
+```
+### Apply Config
+```sh
+kubectl apply -f config.yaml
+```
+### Check configmap
+```sh
+kubectl get configmap
+```

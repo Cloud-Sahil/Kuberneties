@@ -99,3 +99,38 @@ kubectl get configmap my-cred
 ```sh
 kubectl describe configmap my-cred
 ```
+## 2. Create Secret -
+### Write `secret.yaml`
+```sh
+nano secret.yaml
+```
+```sh
+apiVersion: v1 
+kind: Secret
+metadata:
+    name: my-secret
+data: 
+  PASSWORD: "cmVkaGF0"
+  USERNAME: "cm9oaXQ="
+  CITY: "cHVuZQ=="
+```
+### Apply Secret.yaml
+```sh
+kubectl apply -f secret.yaml
+```
+### Check Secret
+```sh
+kubectl get secret
+```
+### Describe secret
+```sh
+kubectl describe secret
+```
+### Check Password
+```sh
+echo -n "redhat" | base64
+```
+### Check Username
+```sh
+echo -n "admin" | base64
+```

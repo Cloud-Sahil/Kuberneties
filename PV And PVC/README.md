@@ -95,3 +95,103 @@ kubectl get pvc
 ```sh
 kubectl get pods
 ```
+### Storage path PV
+```sh
+mkdir -p /mnt/data
+```
+### Describe Pods
+```sh
+kubectl describe pods
+```
+### Describe PV
+```sh
+kubectl describe pv
+```
+### Describe PVC
+```sh
+kubectl describe pvc
+```
+### Describe Pod `mypod`
+```sh
+kubectl describe pod mypod
+```
+### Access Pod
+```sh
+kubectl exec -it mypod -- sh
+```
+```sh
+echo "Hello World" > /usr/share/nginx/html/index.html
+```
+```sh
+exit
+```
+### Pods Details
+```sh
+kubectl get pods -o wide
+```
+### Testing Application
+```sh
+curl `<ip>`
+```
+### Delete pod
+```sh
+kubectl delete pod mypod
+```
+### Verify Deletion
+```sh
+kubectl get pods
+```
+### Check Persistent Data - (Go to PV storage directory)
+```sh
+cd /mnt/data
+```
+### List Files
+```sh
+ls
+```
+### View file content - (Confirms data persistence after pod deletion)
+```sh
+cat index.html
+```
+### Exit
+```sh
+cd
+```
+---
+### Recreate Pod - `Metadata name is change`
+```sh
+nano pod.yaml
+```
+```sh
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: myfrontend
+    image: nginx
+    volumeMounts:
+    - mountPath: "/var/www/html"
+      name: pv-example
+
+  volumes:
+  - name: pv-example
+    persistentVolumeClaim:
+      claimName: pvc-example
+```
+### Recreate Pod Apply 
+```sh
+kubectl apply -f pod.yaml
+```
+### Check Pod
+```sh
+kubectl get pods
+```
+### Check All pods
+```sh
+kubectl get pods -o wide
+```
+### Test Again
+```sh
+curl `<ip>`

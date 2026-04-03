@@ -1,5 +1,22 @@
 # Kuberneties (K8S)
 ---
+
+
+
+
+<img width="1536" height="1024" alt="Kubernetes architecture overview and components" src="https://github.com/user-attachments/assets/0e68cf54-4aff-4d56-8a86-712dc1bc569d" />
+
+
+
+
+
+
+
+
+
+
+
+
 **1. NameSpace**
 
 **2. Replication Controller  -- (Old Version)**

@@ -47,7 +47,7 @@ Kubernetes networking is fundamental for ensuring smooth communication between v
   - Kubernetes ensures a flat network model where all pods can communicate without NAT.
 ---
 
-## Introduction to YAML Scripts and Kubernetes Manifest Files
+ - ## Introduction to YAML Scripts and Kubernetes Manifest Files
 
 ## Understanding YAML Scripts
 YAML (YAML Ain't Markup Language) is a human-readable data serialization format used extensively in Kubernetes for writing manifest files. It is used to define resources like Pods, Services, Deployments, and more.

@@ -1,6 +1,6 @@
 # Kubernetes Pods and Services
 ---
-## Introduction to Pods and Services
+ - ## Introduction to Pods and Services
 ### Pods
 A Pod is the smallest deployable unit in Kubernetes, encapsulating one or more containers with shared resources like storage and network.
 

@@ -62,14 +62,14 @@ YAML (YAML Ain't Markup Language) is a human-readable data serialization format 
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-pod
+  name: nginx-pod
   labels:
-    app: my-app
+      app: nginx
 spec:
   containers:
     - name: nginx
-      image: nginx:latest
-      ports:
+      image: nginx
+      ports: 
         - containerPort: 80
 ```
 
@@ -83,14 +83,14 @@ A Pod is the smallest deployable unit in Kubernetes.
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-pod
+  name: nginx-pod
   labels:
-    app: my-app
+      app: nginx
 spec:
   containers:
     - name: nginx
-      image: nginx:latest
-      ports:
+      image: nginx
+      ports: 
         - containerPort: 80
 ```
 **Explanation**:

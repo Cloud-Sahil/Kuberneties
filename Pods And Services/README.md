@@ -25,7 +25,6 @@ Services provide stable networking and expose Pods to other applications or exte
 | **NodePort**     | External (via node IP)  | Testing or small setups without a load balancer | `http://<node-ip>:30080`      |
 | **LoadBalancer** | Internet (via cloud LB) | Production applications accessible publicly     | `http://<public-ip>`          |
 
----
 #### ClusterIP (Internal Access Only)
 #### NodePort (Access from Browser using Node IP)
 #### LoadBalancer (Public IP – Cloud Only)

@@ -14,4 +14,4 @@
 ### Ingress controller
  - Ensure that the traffic requested by the user has requested the desired destination it will route the trafic to desired destination.
 ---
-<img width="2000" height="1000" alt="image" src="https://github.com/user-attachments/assets/a817af63-7f38-4ff0-b7df-1a306096f14a" />
+<img width="1500" height="850" alt="image" src="https://github.com/user-attachments/assets/a817af63-7f38-4ff0-b7df-1a306096f14a" />

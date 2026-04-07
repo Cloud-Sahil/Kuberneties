@@ -26,3 +26,139 @@
 | Example | `/app1 → app1-service` |NGINX controller routing traffic  | 
 
 ---
+
+
+
+
+
+### Sample Applications
+✅ App1 (Deployment + Service)
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app1
+  template:
+    metadata:
+      labels:
+        app: app1
+    spec:
+      containers:
+      - name: app1
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello from App1"
+ ports:
+        - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app1-svc
+spec:
+  selector:
+    app: app1
+  ports:
+  - port: 80
+    targetPort: 5678
+```
+### ✅ App2 (Deployment + Service)
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2
+spec:
+  replicas: 1
+selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+      - name: app2
+        image: hashicorp/http-echo
+        args:
+        - "-text=Hello from App2"
+        ports:
+        - containerPort: 5678
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app2-svc
+spec:
+  selector:
+    app: app2
+  ports:
+  - port: 80
+    targetPort: 5678
+```
+### Ingress Examples
+**✅ Path-based Routing**
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: path-based-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /app1
+        pathType: Prefix
+        backend:
+          service:
+            name: app1-svc
+            port:
+              number: 80
+      - path: /app2
+        pathType: Prefix
+        backend:
+          service:
+            name: app2-svc
+            port:
+              number: 80
+```
+**✅ Host/Name-based Routing**
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: host-based-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: app1.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app1-svc
+            port:
+              number: 80
+  - host: app2.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: app2-svc
+            port:
+              number: 80
+```
+---

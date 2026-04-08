@@ -59,11 +59,33 @@ mv ./kubectl ~/.local/bin/kubectl
 ```sh
 kubectl version --client
 ```
-
-
-
-### Sample Applications
-✅ App1 (Deployment + Service)
+### Create Amazon EKS cluster using eksctl
+```sh
+eksctl create cluster --name k8s --region ap-south-1 --version 1.35 --nodegroup-name k8s-nodes --node-type c7i-flex.large --nodes 1
+```
+### Log In Into EKS cluster
+```sh
+aws eks update-kubeconfig --name k8s
+```
+### `Delete EKS Cluster`
+```sh
+eksctl delete cluster --name k8s --region ap-south-1
+```
+### Install NGINX Ingress Controller (Manifests)
+#### Apply the official manifest:
+```sh
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
+```
+#### Verify installation:
+```sh
+kubectl get pods -n ingress-nginx
+kubectl get svc -n ingress-nginx
+```
+---
+### Write `App1.yaml` file (Deployment + Service)
+```sh
+nano app1-deploy.yaml
+```
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -98,7 +120,10 @@ spec:
   - port: 80
     targetPort: 5678
 ```
-### ✅ App2 (Deployment + Service)
+### Write `App2.yaml` file (Deployment + Service)
+```sh
+nano app2-deploy.yaml
+```
 ```yaml
 apiVersion: apps/v1
 kind: Deployment

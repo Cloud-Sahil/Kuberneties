@@ -239,4 +239,16 @@ spec:
             port:
               number: 80
 ```
+```sh
+kubectl apply -f ingress.yaml
+```
+```sh
+kubectl get ingress
+```
+```sh
+kubectl get svc
+```
+## Load Balancer
+DNS IP Copy (/app1 , /app2)
+
 ---

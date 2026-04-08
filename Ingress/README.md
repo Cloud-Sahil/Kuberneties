@@ -177,8 +177,11 @@ kubectl get svc
 ```sh
 kubectl get pods -o wide
 ```
-### Ingress Examples
-**✅ Path-based Routing**
+###  Write `Ingress.yaml` 
+```sh
+nano ingress.yaml
+```
+ - ####  Ex. Path-based Routing
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -206,7 +209,7 @@ spec:
             port:
               number: 80
 ```
-**✅ Host/Name-based Routing**
+ - ####  Ex. Host/Name-based Routing
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
